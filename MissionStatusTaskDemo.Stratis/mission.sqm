@@ -1,0 +1,3173 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=513;
+	class ItemIDProvider
+	{
+		nextID=75;
+	};
+	class Camera
+	{
+		pos[]={2364.2917,37.883961,1127.7775};
+		dir[]={0.86222404,-0.46739119,-0.19542544};
+		up[]={0.45585009,0.88403374,-0.10331974};
+		aside[]={-0.22105053,7.3261617e-008,-0.97529644};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Characters_F",
+	"A3_Weapons_F_SMGs_SMG_01",
+	"A3_Weapons_F_Exp",
+	"A3_Weapons_F_Acc",
+	"A3_Weapons_F",
+	"A3_Weapons_F_Pistols_P07",
+	"A3_Weapons_F_Items",
+	"A3_Weapons_F_Explosives",
+	"A3_Weapons_F_Orange",
+	"A3_Weapons_F_Exp_Rifles_AKS",
+	"A3_Modules_F_Intel",
+	"A3_Soft_F_Beta_Truck_02",
+	"A3_Structures_F_Civ_Lamps",
+	"A3_Structures_F_EPA_Civ_Constructions"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=8;
+		class Item0
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Weapons_F";
+			name="Arma 3 Alpha - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Weapons_F_Exp";
+			name="Arma 3 Apex - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Weapons_F_Orange";
+			name="Arma 3 Orange - Weapons and Accessories";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="A3_Modules_F";
+			name="Arma 3 Alpha - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item5
+		{
+			className="A3_Soft_F_Beta";
+			name="Arma 3 Beta - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item6
+		{
+			className="A3_Structures_F";
+			name="Arma 3 - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item7
+		{
+			className="A3_Structures_F_EPA";
+			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=15799647;
+class ScenarioData
+{
+	author="Nimrod-Zero";
+	overviewText="task demo mission:   tasks are not auto assigned letting the players choose what ones to do in whatever order they want. this mission uses a script that checks  mission vars  and sets them to true if objective was successfull.  when the success var is switched to true it trips trigger enableing visual indicator of the task being passed.";
+	overviewTextLocked="task demo mission:   tasks are not auto assigned letting the players choose what ones to do in whatever order they want.";
+	disabledAI=1;
+	class Header
+	{
+		gameType="Coop";
+		minPlayers=1;
+		maxPlayers=2;
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=120.00001;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="ReviveDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=10;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=1;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="EndMission";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"SCALAR"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=4;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		briefingName="Mission Status Task Demo  ";
+		overviewText="task demo mission";
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=7;
+		day=11;
+		hour=0;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=49;
+		class Item0
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2341.7043,-3.1184628,1112.7983};
+						angles[]={0,1.4475497,0};
+					};
+					side="West";
+					flags=2;
+					class Attributes
+					{
+						isPlayer=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="SMG_01_F";
+								optics="optic_Holosight_smg_blk_F";
+								muzzle="muzzle_snds_acp";
+								class primaryMuzzleMag
+								{
+									name="30Rnd_45ACP_Mag_SMG_01";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="hgun_P07_F";
+								muzzle="muzzle_snds_L";
+								class primaryMuzzleMag
+								{
+									name="16Rnd_9x21_Mag";
+									ammoLeft=16;
+								};
+							};
+							class uniform
+							{
+								typeName="U_B_Wetsuit";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="16Rnd_9x21_Mag";
+										count=2;
+										ammoLeft=16;
+									};
+									class Item1
+									{
+										name="SmokeShellBlue";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="Chemlight_blue";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="30Rnd_45ACP_Mag_SMG_01";
+										count=4;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="V_RebreatherB";
+								isBackpack=0;
+							};
+							class backpack
+							{
+								typeName="B_AssaultPack_blk_DiverExp";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="DemoCharge_Remote_Mag";
+										count=3;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ToolKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="MineDetector";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							goggles="G_B_Diving";
+							hmd="NVGogglesB_blk_F";
+						};
+					};
+					id=63;
+					type="B_diver_exp_F";
+					atlOffset=0.63591003;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2340.5254,-3.2984715,1114.7825};
+						angles[]={0,1.4475497,0};
+					};
+					side="West";
+					class Attributes
+					{
+						isPlayable=1;
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="SMG_01_F";
+								optics="optic_Holosight_smg_blk_F";
+								muzzle="muzzle_snds_acp";
+								class primaryMuzzleMag
+								{
+									name="30Rnd_45ACP_Mag_SMG_01";
+									ammoLeft=30;
+								};
+							};
+							class handgun
+							{
+								name="hgun_P07_F";
+								muzzle="muzzle_snds_L";
+								class primaryMuzzleMag
+								{
+									name="16Rnd_9x21_Mag";
+									ammoLeft=16;
+								};
+							};
+							class uniform
+							{
+								typeName="U_B_Wetsuit";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=4;
+									class Item0
+									{
+										name="16Rnd_9x21_Mag";
+										count=2;
+										ammoLeft=16;
+									};
+									class Item1
+									{
+										name="SmokeShellBlue";
+										count=2;
+										ammoLeft=1;
+									};
+									class Item2
+									{
+										name="Chemlight_blue";
+										count=4;
+										ammoLeft=1;
+									};
+									class Item3
+									{
+										name="30Rnd_45ACP_Mag_SMG_01";
+										count=4;
+										ammoLeft=30;
+									};
+								};
+								class ItemCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="FirstAidKit";
+										count=1;
+									};
+								};
+							};
+							class vest
+							{
+								typeName="V_RebreatherB";
+								isBackpack=0;
+							};
+							class backpack
+							{
+								typeName="B_AssaultPack_blk_DiverExp";
+								isBackpack=1;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="DemoCharge_Remote_Mag";
+										count=3;
+										ammoLeft=1;
+									};
+								};
+								class ItemCargo
+								{
+									items=2;
+									class Item0
+									{
+										name="ToolKit";
+										count=1;
+									};
+									class Item1
+									{
+										name="MineDetector";
+										count=1;
+									};
+								};
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+							goggles="G_B_Diving";
+							hmd="NVGogglesB_blk_F";
+						};
+					};
+					id=64;
+					type="B_diver_exp_F";
+					atlOffset=0.63591003;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male12ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.98000002;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=8;
+			atlOffset=0.63591003;
+		};
+		class Item1
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2428.8176,3.2982557,1168.5443};
+						angles[]={0,4.0731878,0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="hostage_1";
+					};
+					id=11;
+					type="C_man_polo_1_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male03GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=10;
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2423.6797,2.5966437,1092.4209};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+						name="hostage_2";
+					};
+					id=13;
+					type="C_man_polo_2_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01GRE";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=12;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2426.8843,2.6202967,1117.8671};
+						angles[]={0,3.9536681,0};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=0.64501458;
+						init="removeHeadgear this; " \n "removeUniform this;  " \n "this forceAddUniform ""U_NikosAgedBody"";  " \n "";
+						name="bossman1";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="arifle_AKS_F";
+								class primaryMuzzleMag
+								{
+									name="30Rnd_545x39_Mag_F";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_O_CombatUniform_ocamo";
+								isBackpack=0;
+							};
+							class vest
+							{
+								typeName="V_Rangemaster_belt";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="30Rnd_545x39_Mag_F";
+										count=5;
+										ammoLeft=30;
+									};
+								};
+							};
+						};
+					};
+					id=15;
+					type="O_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=14;
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="East";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={2426.6692,2.6212709,1116.0814};
+					};
+					side="East";
+					flags=7;
+					class Attributes
+					{
+						skill=0.65176654;
+						init="removeHeadgear this; " \n "removeUniform this;  " \n "this forceAddUniform ""U_NikosAgedBody"";  " \n "";
+						name="bossman2";
+						class Inventory
+						{
+							class primaryWeapon
+							{
+								name="arifle_AKS_F";
+								class primaryMuzzleMag
+								{
+									name="30Rnd_545x39_Mag_F";
+									ammoLeft=30;
+								};
+							};
+							class uniform
+							{
+								typeName="U_O_CombatUniform_ocamo";
+								isBackpack=0;
+							};
+							class vest
+							{
+								typeName="V_Rangemaster_belt";
+								isBackpack=0;
+								class MagazineCargo
+								{
+									items=1;
+									class Item0
+									{
+										name="30Rnd_545x39_Mag_F";
+										count=5;
+										ammoLeft=30;
+									};
+								};
+							};
+						};
+					};
+					id=17;
+					type="O_Survivor_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01PER";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.04;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=16;
+		};
+		class Item5
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2423.6313,2.4190178,1125.5035};
+				angles[]={6.2581892,0,0.077345982};
+			};
+			id=18;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="destroy";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="truck";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="task1";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CREATED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item6
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2419.5405,2.0799408,1125.1379};
+				angles[]={6.2556911,0,0.089758366};
+			};
+			id=19;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item7
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2420.2283,2.1548471,1125.5122};
+				angles[]={6.2556911,0,0.079830162};
+			};
+			id=20;
+			type="ModuleTaskSetDescription_F";
+			atlOffset=0.004999876;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetDescription_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetDescription_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Destroy cartel truck";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskSetDescription_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskSetDescription_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Destroy the cartel truck with the product its transporting.";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item8
+		{
+			dataType="Trigger";
+			position[]={2418.7109,2.0136817,1124.8643};
+			class Attributes
+			{
+				condition="missionTask_01_Completed_success";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=21;
+			type="EmptyDetector";
+		};
+		class Item9
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2419.6365,2.1159654,1126.1339};
+				angles[]={6.2556911,0,0.089758366};
+			};
+			id=22;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FAILED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item10
+		{
+			dataType="Trigger";
+			position[]={2419.031,2.0762939,1126.6729};
+			class Attributes
+			{
+				condition="missionTask_01_Completed_fail";
+				sizeA=0;
+				sizeB=0;
+				activationBy="ANYPLAYER";
+				isServerOnly=1;
+			};
+			id=23;
+			type="EmptyDetector";
+		};
+		class Item11
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2403.9727,1.6094679,1130.4902};
+				angles[]={0.027492445,0,0.074860021};
+			};
+			id=24;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="kill";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="twins";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="task2";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CREATED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item12
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2403.3274,1.569378,1130.1882};
+				angles[]={0.027492445,0,0.074860021};
+			};
+			id=25;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item13
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2403.604,1.581641,1130.4967};
+				angles[]={0.027492445,0,0.074860021};
+			};
+			id=26;
+			type="ModuleTaskSetDescription_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetDescription_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetDescription_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="The twins";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskSetDescription_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskSetDescription_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Eliminate the cartel twins.";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item14
+		{
+			dataType="Trigger";
+			position[]={2403.1094,1.5567361,1130.0533};
+			class Attributes
+			{
+				condition="missionTask_02_Completed_success";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=27;
+			type="EmptyDetector";
+		};
+		class Item15
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2403.3438,1.5535986,1130.8066};
+				angles[]={0.027492445,0,0.074860021};
+			};
+			id=28;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FAILED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item16
+		{
+			dataType="Trigger";
+			position[]={2403.1445,1.5356426,1130.9163};
+			class Attributes
+			{
+				condition="missionTask_02_Completed_fail";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=29;
+			type="EmptyDetector";
+		};
+		class Item17
+		{
+			dataType="Trigger";
+			position[]={2328.1941,-0.00018906593,1117.943};
+			class Attributes
+			{
+				name="theEndTrigger";
+				condition="this && missionFinished";
+				onActivation="[this,""SMG_endMission""] remoteExecCall [""SMG_fnc_missionStatus"",2]";
+				sizeA=15;
+				sizeB=30;
+				activationBy="WEST";
+				isRectangle=1;
+			};
+			id=30;
+			type="EmptyDetector";
+			atlOffset=3.793;
+		};
+		class Item18
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2329.4194,-0.074077845,1116.8984};
+			};
+			title="End Mission Trigger";
+			id=31;
+			atlOffset=3.7593865;
+		};
+		class Item19
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2423.646,4.8008871,1125.5499};
+				angles[]={6.2581921,6.2157631,0.077352993};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="cartelTruck";
+			};
+			id=32;
+			type="O_Truck_02_covered_F";
+			atlOffset=-0.010075092;
+		};
+		class Item20
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2421.7695,2.2576561,1124.9489};
+				angles[]={6.2556911,0,0.079830162};
+			};
+			title="Destroy truck task";
+			id=33;
+		};
+		class Item21
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2404.2549,1.6216487,1130.4231};
+				angles[]={0.027492445,0,0.032487731};
+			};
+			title="Kill twins task";
+			id=34;
+		};
+		class Item22
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2407.123,1.6544458,1119.0931};
+				angles[]={0.019999012,0,6.2531939};
+			};
+			id=35;
+			type="ModuleTaskCreate_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="help";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="hostages";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="task3";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="CREATED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item23
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2405.2075,1.7160296,1118.7167};
+				angles[]={6.2581892,0,0.015002378};
+			};
+			id=36;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item24
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2405.6353,1.6889697,1119.5986};
+				angles[]={0.019999012,0,6.2531939};
+			};
+			id=37;
+			type="ModuleTaskSetDescription_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetDescription_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetDescription_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Free hostages";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskSetDescription_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskSetDescription_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Search the area and free the hostages.";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item25
+		{
+			dataType="Trigger";
+			position[]={2404.2737,1.6973529,1118.5299};
+			class Attributes
+			{
+				condition="missionTask_03_Completed_success";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=38;
+			type="EmptyDetector";
+		};
+		class Item26
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2405.6313,1.6627784,1120.5625};
+				angles[]={0.032487731,0,6.2531939};
+			};
+			id=39;
+			type="ModuleTaskSetState_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="FAILED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item27
+		{
+			dataType="Trigger";
+			position[]={2404.8491,1.6606007,1121.3516};
+			class Attributes
+			{
+				condition="missionTask_03_Completed_fail";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=40;
+			type="EmptyDetector";
+		};
+		class Item28
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2407.4429,1.6469849,1118.9865};
+				angles[]={0.019999012,0,6.2531939};
+			};
+			title="Free hostage task";
+			id=41;
+		};
+		class Item29
+		{
+			dataType="Trigger";
+			position[]={2416.8477,1.9230163,1124.1486};
+			class Attributes
+			{
+				condition="!alive cartelTruck";
+				onActivation="[this,""SMG_cartelTruck_Pass""] remoteExecCall [""SMG_fnc_missionStatus"",2]";
+				sizeA=0;
+				sizeB=0;
+				isServerOnly=1;
+			};
+			id=44;
+			type="EmptyDetector";
+		};
+		class Item30
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2417.2566,1.9483163,1123.7164};
+				angles[]={0.0075011365,0,0.052451372};
+			};
+			title="notify server if truck is destroyed";
+			description="if the truck is destroyed the server will set the ""missionTask_01_Completed_success"" variable to true.    if it is true then the task state trigger sets the task to succeeded.  doing it this way eliminates any join in progress issues.";
+			id=45;
+			atlOffset=0.00021851063;
+		};
+		class Item31
+		{
+			dataType="Trigger";
+			position[]={2417.7385,2.0175421,1128.3832};
+			class Attributes
+			{
+				condition="alive cartelTruck && (vehicle player) inArea theEndTrigger && missionFinished";
+				onActivation="[this,""SMG_cartelTruck_Fail""] remoteExecCall [""SMG_fnc_missionStatus"",2]";
+				sizeA=0;
+				sizeB=0;
+				isServerOnly=1;
+			};
+			id=46;
+			type="EmptyDetector";
+		};
+		class Item32
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2418.1482,2.0344787,1128.0208};
+				angles[]={6.22824,0,0.089758366};
+			};
+			title="notify server if truck is not destroyed at mission end";
+			description="if the truck is  notdestroyed the server will set the ""missionTask_01_Completed_fail"" variable to true.    if it is true then the task state trigger sets the task to failed.  doing it this way eliminates any join in progress issues.";
+			id=47;
+		};
+		class Item33
+		{
+			dataType="Trigger";
+			position[]={2402.5796,1.5126718,1130.2108};
+			class Attributes
+			{
+				condition="!alive bossman1 && !alive bossman2";
+				onActivation="[this,""SMG_cartelTwins_Pass""] remoteExecCall [""SMG_fnc_missionStatus"",2]";
+				sizeA=0;
+				sizeB=0;
+				isServerOnly=1;
+			};
+			id=48;
+			type="EmptyDetector";
+		};
+		class Item34
+		{
+			dataType="Trigger";
+			position[]={2402.7502,1.4938922,1131.3591};
+			class Attributes
+			{
+				condition="(alive bossman1 || alive bossman2) && (vehicle player) inArea theEndTrigger && missionFinished";
+				onActivation="[this,""SMG_cartelTwins_Fail""] remoteExecCall [""SMG_fnc_missionStatus"",2]";
+				sizeA=0;
+				sizeB=0;
+				isServerOnly=1;
+			};
+			id=49;
+			type="EmptyDetector";
+		};
+		class Item35
+		{
+			dataType="Trigger";
+			position[]={2401.1377,1.5712454,1120.8937};
+			class Attributes
+			{
+				condition="!(captivesFree_confirmed) && (vehicle player) inArea theEndTrigger && missionFinished";
+				onActivation="missionTask_03_Completed_fail=true";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=51;
+			type="EmptyDetector";
+		};
+		class Item36
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2327.865,0.81676942,1117.929};
+			};
+			id=53;
+			type="ModuleTaskCreate_F";
+			atlOffset=4.5720448;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskCreate_F_Destination";
+					expression="_this setVariable ['Destination',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskCreate_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="meet";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskCreate_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskCreate_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleTaskCreate_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="extraction";
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="ModuleTaskCreate_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="ModuleTaskCreate_F_ID";
+					expression="_this setVariable ['ID',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="task4";
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="ModuleTaskCreate_F_AlwaysVisible";
+					expression="_this setVariable ['AlwaysVisible',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="ModuleTaskCreate_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="ModuleTaskCreate_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="ASSIGNED";
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="ModuleTaskCreate_F_IDParent";
+					expression="_this setVariable ['IDParent',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				nAttributes=11;
+			};
+		};
+		class Item37
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2324.106,-0.21763444,1120.093};
+			};
+			id=54;
+			type="ModuleTaskSetState_F";
+			atlOffset=3.7590001;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetState_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetState_F_State";
+					expression="_this setVariable ['State',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="SUCCEEDED";
+						};
+					};
+				};
+				nAttributes=2;
+			};
+		};
+		class Item38
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={2325.7419,-0.20480871,1119.651};
+			};
+			id=55;
+			type="ModuleTaskSetDescription_F";
+			atlOffset=3.7589998;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleTaskSetDescription_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleTaskSetDescription_F_Title";
+					expression="_this setVariable ['Title',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Extraction";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleTaskSetDescription_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleTaskSetDescription_F_Description";
+					expression="_this setVariable ['Description',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Move to position to end mission";
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item39
+		{
+			dataType="Trigger";
+			position[]={2322.8569,-0.32639194,1120.489};
+			class Attributes
+			{
+				condition="missionFinished && (vehicle player) inArea theEndTrigger";
+				sizeA=0;
+				sizeB=0;
+			};
+			id=56;
+			type="EmptyDetector";
+			atlOffset=3.7590001;
+		};
+		class Item40
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2327.3645,0.18464494,1116.853};
+			};
+			title="End mission task";
+			id=59;
+			atlOffset=3.7593882;
+		};
+		class Item41
+		{
+			dataType="Trigger";
+			position[]={2334.7549,0.13985658,1111.813};
+			class Attributes
+			{
+				condition="missionFinished";
+				sizeA=0;
+				sizeB=0;
+				timeout[]={5,5,5};
+			};
+			id=62;
+			type="EmptyDetector";
+			atlOffset=3.7589996;
+		};
+		class Item42
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2432.0122,6.6711755,1122.2427};
+				angles[]={0,4.5183258,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=65;
+			type="Land_LampShabby_F";
+		};
+		class Item43
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2417.6997,6.6763711,1089.9985};
+				angles[]={0,6.0909433,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=66;
+			type="Land_LampShabby_F";
+		};
+		class Item44
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2431.2593,6.8510165,1155.3683};
+				angles[]={0,2.7322292,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=67;
+			type="Land_LampShabby_F";
+		};
+		class Item45
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={2431.5496,4.3037004,1115.8441};
+				angles[]={0,1.6064231,0};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+			};
+			id=70;
+			type="Land_PortableLight_double_F";
+		};
+		class Item46
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2402.6606,1.5243894,1130.0143};
+				angles[]={0.027492445,0,0.074860021};
+			};
+			title="Server - kill twins Pass Trigger";
+			id=71;
+			atlOffset=0.00023388863;
+		};
+		class Item47
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2402.8435,1.5051781,1131.2117};
+				angles[]={0.027492445,0,0.074860021};
+			};
+			title="Server - kill twins Fail Trigger";
+			id=72;
+			atlOffset=0.00023603439;
+		};
+		class Item48
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={2401.863,1.618,1120.286};
+			};
+			title="Fail if hostages not free and players leave";
+			id=73;
+			atlOffset=-0.00014662743;
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=19;
+		};
+		class Links
+		{
+			items=19;
+			class Item0
+			{
+				linkID=0;
+				item0=18;
+				item1=20;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=19;
+				item1=21;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=19;
+				item1=18;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=22;
+				item1=23;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item4
+			{
+				linkID=4;
+				item0=22;
+				item1=18;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item5
+			{
+				linkID=5;
+				item0=25;
+				item1=27;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item6
+			{
+				linkID=6;
+				item0=28;
+				item1=29;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item7
+			{
+				linkID=7;
+				item0=35;
+				item1=37;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item8
+			{
+				linkID=8;
+				item0=36;
+				item1=38;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item9
+			{
+				linkID=9;
+				item0=36;
+				item1=35;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item10
+			{
+				linkID=10;
+				item0=39;
+				item1=40;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item11
+			{
+				linkID=11;
+				item0=39;
+				item1=35;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item12
+			{
+				linkID=12;
+				item0=26;
+				item1=24;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item13
+			{
+				linkID=13;
+				item0=28;
+				item1=24;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item14
+			{
+				linkID=14;
+				item0=25;
+				item1=24;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item15
+			{
+				linkID=15;
+				item0=53;
+				item1=55;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item16
+			{
+				linkID=16;
+				item0=54;
+				item1=56;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item17
+			{
+				linkID=17;
+				item0=54;
+				item1=53;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item18
+			{
+				linkID=18;
+				item0=62;
+				item1=53;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};
